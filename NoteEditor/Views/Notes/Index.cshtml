@@ -1,0 +1,30 @@
+﻿@model IEnumerable<NoteEditor.Models.Note>
+
+<div class="container py-4">
+    <h2 class="mb-3">My Notes</h2>
+    <a asp-action="Create" class="btn btn-primary mb-3">+ Add New Note</a>
+
+    @if (!Model.Any())
+    {
+        <p>No notes yet.</p>
+    }
+    else
+    {
+        <div class="list-group">
+            @foreach (var note in Model)
+            {
+                <div class="list-group-item mb-2">
+                    <h5>@note.Title</h5>
+                    <p>@note.Content</p>
+                    <small>Created: @note.CreatedAt.ToString("g")</small>
+                    <div class="mt-2">
+                        <a asp-action="Edit" asp-route-id="@note.Id" class="btn btn-sm btn-secondary">Edit</a>
+                        <form asp-action="Delete" asp-route-id="@note.Id" method="post" class="d-inline">
+                            <button type="submit" class="btn btn-sm btn-danger">Delete</button>
+                        </form>
+                    </div>
+                </div>
+            }
+        </div>
+    }
+</div>

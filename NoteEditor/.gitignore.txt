@@ -1,0 +1,48 @@
+﻿# Build results
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+.vs/
+
+# Visual Studio user-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Rider / JetBrains
+.idea/
+
+# VS Code
+.vscode/
+
+# NuGet packages
+*.nupkg
+*.snupkg
+packages/
+**/packages/*
+*.nuspec
+*.ncrunchsolution
+
+# Cache and temporary files
+*.cache
+*.dbmdl
+*.bak
+*.log
+*.tmp
+*.temp
+*.vspscc
+
+# Publish files
+publish/
+*.publishsettings
+app.publish/
+
+# Configuration secrets
+appsettings.Development.json
+appsettings.Local.json
+secrets.json
+
+# Entity Framework Migrations (optional)
+Migrations/
